@@ -21,5 +21,5 @@ pub fn sey(name: String) -> String{
 
 pub fn unsafe_code(){
     let x = 2;
-    assert!(x == 3);    
+    assert!(x == 2);    
 }

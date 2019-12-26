@@ -22,6 +22,12 @@ struct Meme{
     mode: Mode
 }
 
+impl Meme{
+    fn get_name(&self) -> String{
+        return self.name.to_string()
+    }
+}
+
 fn get_property(prop: Property) -> String {
     match prop {
         Property::Init(text) => format!("{}", text),
@@ -47,7 +53,7 @@ fn main() {
         ip_kind: IPAddress::V4(127,0,0,1),
         mode: new_meme_mode
     };
-    println!("Name: {}", new_meme.name);
+    println!("Name: {}", new_meme.get_name());
     println!("Type: {}", new_meme.mode.r#type);
     println!("Ip: {}", get_ip(new_meme.ip_kind, Some(Property::Scale)));
     println!("Kind: {}", new_meme.mode.kind);
