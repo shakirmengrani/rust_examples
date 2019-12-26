@@ -18,7 +18,8 @@ macro_rules! yolo_vec {
         {
             let mut temp_vec = Vec::new();
             $(
-                temp_vec.push(sqrt!($x));
+                let mut _sqt = sqrt!($x);
+                temp_vec.push(_sqt);
             )*
             temp_vec
         }
